@@ -1,0 +1,58 @@
+import type { TeamMember } from '../types'
+
+export const SEED_TEAM: TeamMember[] = [
+  {
+    id: 'eng-a',
+    name: 'Engineer A',
+    role: 'Senior Backend Engineer',
+    systems: ['Authentication', 'Payment API', 'Frontend Delivery'],
+    resolvedCount: 4,
+    recentResolution: 'Database connection timeout',
+    avatarSeed: 'A',
+  },
+  {
+    id: 'eng-b',
+    name: 'Engineer B',
+    role: 'Backend Engineer',
+    systems: ['Payment API', 'Authentication', 'Compute'],
+    resolvedCount: 5,
+    recentResolution: 'SSL certificate incident',
+    avatarSeed: 'B',
+  },
+  {
+    id: 'eng-c',
+    name: 'Engineer C',
+    role: 'Site Reliability Engineer',
+    systems: ['Database', 'Infrastructure', 'Search', 'Compute'],
+    resolvedCount: 6,
+    recentResolution: 'Database connection slow to establish',
+    avatarSeed: 'C',
+  },
+  {
+    id: 'eng-d',
+    name: 'Engineer D',
+    role: 'Platform Engineer',
+    systems: ['Orders Service', 'Notifications'],
+    resolvedCount: 0,
+    recentResolution: '—',
+    avatarSeed: 'D',
+  },
+  {
+    id: 'eng-e',
+    name: 'Engineer E',
+    role: 'Frontend Engineer',
+    systems: ['Frontend Delivery', 'Notifications'],
+    resolvedCount: 0,
+    recentResolution: '—',
+    avatarSeed: 'E',
+  },
+  {
+    id: 'eng-f',
+    name: 'Engineer F',
+    role: 'Security Engineer',
+    systems: ['Authentication', 'Payment API'],
+    resolvedCount: 0,
+    recentResolution: '—',
+    avatarSeed: 'F',
+  },
+]

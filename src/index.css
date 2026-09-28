@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-charcoal-950 text-white/90 font-sans antialiased;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(124, 108, 240, 0.10), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(78, 232, 255, 0.08), transparent 40%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(78, 232, 255, 0.18);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(78, 232, 255, 0.32);
+}
+
+*:focus-visible {
+  outline: 2px solid #4ee8ff;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.08];
+  }
+  .glass-strong {
+    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/[0.10];
+  }
+  .chip {
+    @apply px-3 py-1.5 rounded-full text-xs font-medium border border-white/10 bg-white/[0.03] text-white/70
+      hover:border-cyan-accent/50 hover:text-cyan-soft hover:bg-cyan-accent/[0.06] transition-colors cursor-pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
